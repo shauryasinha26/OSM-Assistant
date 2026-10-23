@@ -1,0 +1,3 @@
+export interface SemanticMapping { rubric_step:string; student_phrase:string; keywords:string[]; match_score:string; verdict:string }
+export interface NcertCitation { chapter:string; section:string; exact_quote:string }
+export interface StudentScript { script_id:string; student_status:string; chapter:string; question_id:string; question_text:string; question_intent:string; max_marks:number; teacher_marks:number; ai_suggested_marks:number; flagged:boolean; flag_type:string; ocr_confidence:number; student_answer_ocr:string; student_answer_html?:string; missed_scheme_point:string; semantic_mapping:SemanticMapping[]; ncert_citation?:NcertCitation; ncert_ref?:string; ncert_quote?:string; jee_risk?:boolean; decision?:'pending'|'flagged'|'kept' }

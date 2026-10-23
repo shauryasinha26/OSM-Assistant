@@ -1,0 +1,1 @@
+export type GlitchCategory='Upload'|'Timeout'|'Display'|'Login'; export interface GlitchCluster { cluster_id:string; category:GlitchCategory; report_count:number; severity:'High'|'Medium'|'Low'; likely_cause:string; recommended_action:string; sample_reports:string[] }

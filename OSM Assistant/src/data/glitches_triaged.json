@@ -1,0 +1,3 @@
+[
+ {"cluster_id":"GLITCH-UPL-01","category":"Upload","report_count":7,"severity":"High","likely_cause":"Large scanned booklets time out on slow center connections.","recommended_action":"Compress images client-side and retry resumable multipart uploads.","sample_reports":["Script stuck at 92% upload for 10 minutes.","Scanned booklet submission fails with network error 504."]}
+]

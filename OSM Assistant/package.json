@@ -1,0 +1,40 @@
+{
+  "name": "osm-second-opinion-assistant",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "server": "node server/index.js",
+    "dev:all": "concurrently -k \"npm:server\" \"npm:dev\"",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "verify": "node scripts/verify-project.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

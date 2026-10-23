@@ -1,0 +1,32 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{color-scheme:light;--canvas:248 249 252;--surface:255 255 255;--line:226 230 238;--ink:36 40 56;--mute:98 105 126;--faint:148 154 172;--shadow:60 70 110;
+--brand-50:238 241 253;--brand-100:224 229 249;--brand-200:197 205 241;--brand-500:99 114 209;--brand-600:84 98 190;--brand-700:70 82 160;
+--sage-50:237 247 240;--sage-100:218 237 224;--sage-300:160 204 172;--sage-600:63 130 84;--sage-700:48 104 66;
+--sand-50:252 246 232;--sand-100:247 235 205;--sand-300:227 192 122;--sand-600:162 122 44;--sand-700:125 90 28;
+--blush-50:252 238 237;--blush-100:247 220 218;--blush-600:176 82 77;--blush-700:143 63 59;
+--mist-50:237 246 251;--mist-100:217 235 245;--mist-700:61 111 140;}
+:root.dark{color-scheme:dark;--canvas:15 17 26;--surface:23 26 38;--line:46 50 68;--ink:231 234 243;--mute:161 167 187;--faint:120 126 147;--shadow:0 0 0;
+--brand-50:33 38 68;--brand-100:42 49 90;--brand-200:63 73 132;--brand-500:130 143 226;--brand-600:99 113 205;--brand-700:165 176 242;
+--sage-50:26 42 33;--sage-100:34 58 44;--sage-300:74 120 90;--sage-600:98 160 118;--sage-700:150 210 170;
+--sand-50:44 36 20;--sand-100:60 49 24;--sand-300:140 110 50;--sand-600:214 170 90;--sand-700:230 190 120;
+--blush-50:48 28 30;--blush-100:66 36 38;--blush-600:200 100 95;--blush-700:238 160 155;
+--mist-50:24 38 48;--mist-100:30 52 66;--mist-700:130 185 214;}
+
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+html{background:rgb(var(--canvas))}
+body{margin:0;min-width:320px;min-height:100vh;background:rgb(var(--canvas));color:rgb(var(--ink));overflow-x:hidden;transition:background .2s,color .2s}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+::selection{background:rgb(var(--brand-200));color:rgb(var(--ink))}
+.scrollbar::-webkit-scrollbar{width:6px;height:6px}
+.scrollbar::-webkit-scrollbar-thumb{background:rgb(var(--line));border-radius:9px}
+
+@layer components{
+  .panel{@apply rounded-2xl border border-line bg-surface shadow-soft}
+  .field{@apply w-full rounded-xl border border-line bg-white px-3 py-2.5 text-base text-ink outline-none transition placeholder:text-faint focus:border-brand-500 focus:ring-4 focus:ring-brand-100 sm:text-sm}
+  .field-label{@apply mb-1.5 block text-xs font-semibold text-mute}
+  .section-label{@apply text-[11px] font-bold uppercase tracking-wider text-mute}
+  .btn-muted{@apply rounded-xl border border-line bg-white px-3 py-2 text-xs font-semibold text-ink/80 transition hover:border-brand-200 hover:bg-brand-50}
+  .chip{@apply inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold}
+}
